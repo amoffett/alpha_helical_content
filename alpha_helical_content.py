@@ -43,5 +43,5 @@ def alpha_helical_content(traj,residues,tol=15,ref=88,cutoff=3.3):
     N=len(residues)
     T=traj.n_frames
     alpha=np.zeros([T,1])
-    alpha[:,0]=(1/float(2*(N-3)))*np.sum(angf(traj,residues,tol=tol,ref=ref),axis=1)+(1/float(2*(N-5)))*np.sum(hbf(traj,residues,cutoff=cutoff),axis=1)
+    alpha[:,0]=(1/float(2*(N-2)))*np.sum(angf(traj,residues,tol=tol,ref=ref),axis=1)+(1/float(2*(N-4)))*np.sum(hbf(traj,residues,cutoff=cutoff),axis=1)
     return alpha
